@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Formulaire d'inscription</title>
+    <link rel="icon" type="image/png" href="images/autobus.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <style>
+        body {
+            background: linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+                url('images/background-vt.jpg') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            padding: 2rem 1rem;
+        }
+
+        .logo-site {
+            color: gold;
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        .logo-site h1 {
+            font-size: 1.8rem;
+            color: white;
+            margin-top: 0.3rem;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        .form-container {
+            background-color: rgba(255, 255, 255, 0.95);
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 450px;
+            width: 100%;
+            text-align: center;
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo du site au-dessus du formulaire (en dehors de la carte) -->
+    <div class="logo-site">
+        <i class="fas fa-bus"></i>
+        <h1>LELAATrans</h1>
+    </div>
+
+    <!-- Formulaire -->
+    <form class="form-container" action="traitement.php" method="post">
+
+        <h2 class="text-primary mb-4">Inscription</h2>
+
+        <div class="mb-3 text-start">
+            <label for="nom" class="form-label">Nom</label>
+            <input type="text" class="form-control" id="nom" name="nom" placeholder="Votre nom" required
+                autocomplete="family-name" aria-label="Nom">
+        </div>
+
+        <div class="mb-4 text-start">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail" required
+                autocomplete="email" aria-label="E-mail">
+        </div>
+
+        <div class="mb-4 text-start">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" class="form-control" id="password" name="password" placeholder="Votre mot de passe" required
+                autocomplete="password" aria-label="password">
+        </div>
+
+
+        <!-- <a href=""> -->
+            <button type="submit" class="btn btn-primary w-100 mb-3">Confirmer</button>
+        <!-- </a> -->
+        <div class="text-center">
+            <p class="d-inline">Vous avez déjà un compte ?</p>
+            <a href="connexion.html" class="fw-bold text-primary text-decoration-none">Connexion</a>
+        </div>
+    </form>
+
+    <!-- Bootstrap JS (optionnel) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

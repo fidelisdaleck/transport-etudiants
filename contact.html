@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - LELAATrans</title>
+    <link rel="icon" type="image/png" href="images/autobus.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        section {
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/backgroundtrans1.jpg') center/cover no-repeat;
+            min-height: calc(100vh - 80px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .message {
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 15px;
+            padding: 40px 25px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 600px;
+            width: 100%;
+        }
+
+        .message h3 {
+            text-align: center;
+            color: #1122cc;
+            margin-bottom: 20px;
+        }
+
+        .submit{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 15px 0px 30px 0px;
+        }
+        .contact p {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 10px;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .navbar-brand span.size {
+            color: gold;
+            font-size: 1.8rem;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navbar Bootstrap -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <span class="size">L</span>ELAA<span class="size">T</span>rans<span class="size"> .</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">            
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-acceuil.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="page-acceuil.html">A propos de nous</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="itineraire.html">Consultez</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Section Contact -->
+    <section>
+        <div class="message">
+            <form action="traitement3.php" method="post">
+                <div class="mb-3">
+                    <label for="name" class="form-label">Nom :</label>
+                    <input type="text" class="form-control" id="name" name="nom" placeholder="Votre nom" required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="surname" class="form-label">Prénom :</label>
+                    <input type="text" class="form-control" id="surname" name="prenom" placeholder="Votre prénom"
+                        required>
+                </div>
+
+                <div class="mb-3">
+                    <label for="email" class="form-label">E-mail :</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="Votre e-mail"
+                        required>
+                </div>
+
+                <!-- <h3>Message</h3>
+                <p>
+                    Vous avez des questions sur nos trajets et tarifs ? Nous sommes là pour vous aider !
+                    Contactez-nous pour obtenir des informations personnalisées et découvrir comment nous pouvons
+                    vous aider à arriver en cours à l'heure.
+                </p> -->
+
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message:</label>
+                    <textarea type="text" class="form-control" id="message" name="Message" placeholder="Dites-nous en quoi nous pouvons vous etre utile..." rows="5"  required></textarea>
+                </div>
+                <div class="submit">
+                    <button type="submit" class="btn btn-primary w-40">Envoyer</button>
+                </div>
+                
+                <div class="contact">
+                    <p><i class="fa-solid fa-phone" style="color: green;"></i> Appelez-nous : +237 655 555 555</p>
+                    <p><i class="fa-solid fa-envelope" style="color: #1122cc;"></i> lelaatrans@gmail.com</p>
+                </div>
+            </form>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS + Popper.js (nécessaire pour navbar hamburger) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connexion - LELAATrans</title>
+    <link rel="icon" type="image/png" href="images/autobus.png">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" />
+
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('images/backgroundtrans1.jpg') center/cover no-repeat;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .logo-site {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-site i {
+            font-size: 60px;
+            color: #FFD700;
+            /* Jaune */
+        }
+
+        .logo-site h1 {
+            color: #FFFFFF;
+            /* Blanc */
+            font-size: 2rem;
+            margin-top: 10px;
+        }
+
+        .connexion-form {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            width: 100%;
+            text-align: center;
+        }
+
+        .connexion-form h2 {
+            color: #1122cc;
+            margin-bottom: 1.5rem;
+        }
+
+        .connexion-form .form-control:focus {
+            border-color: #1122cc;
+            box-shadow: none;
+        }
+
+        .connexion-form button {
+            background-color: #1122cc;
+            border: none;
+            font-weight: 600;
+            transition: background-color 0.3s ease;
+        }
+
+        .connexion-form button:hover {
+            background-color: #0a199c;
+        }
+
+        .connexion-form .link-inscription {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+        }
+
+        .connexion-form .link-inscription a {
+            color: #1122cc;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+        }
+
+        .connexion-form .link-inscription a:hover {
+            color: #0a199c;
+            text-decoration: underline;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Logo du site au-dessus du formulaire -->
+    <div class="logo-site">
+        <i class="fas fa-bus"></i>
+        <h1>LELAATrans</h1>
+    </div>
+
+    <!-- Formulaire de connexion -->
+    <form class="connexion-form" action="traitement2.php" method="post">
+        <h2>Connexion</h2>
+
+        <div class="mb-3 text-start">
+            <label for="email" class="form-label">E-mail</label>
+            <input type="email" id="email" name="email" class="form-control" placeholder="Votre Email" required />
+        </div>
+
+        <div class="mb-3 text-start">
+            <label for="password" class="form-label">Mot de passe</label>
+            <input type="password" id="password" name="password" class="form-control" placeholder="Votre mot de passe"
+                required />
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100">Se connecter</button>
+
+        <div class="link-inscription">
+            <p>Pas encore de compte ? <a href="index.html">Inscrivez-vous ici</a></p>
+        </div>
+    </form>
+
+    <!-- Bootstrap JS bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
